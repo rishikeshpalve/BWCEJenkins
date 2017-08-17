@@ -2,7 +2,7 @@
     "family": "launch-test-app",
     "containerDefinitions": [
         {
-            "image": "750037626691.dkr.ecr.us-east-1.amazonaws.com/bwce-app:latest",
+            "image": "928133119666.dkr.ecr.us-east-1.amazonaws.com/bwce-app:latest",
             "name": "launch-test-app",
             "cpu": 10,
             "memory": 512,
