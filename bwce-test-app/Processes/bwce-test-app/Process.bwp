@@ -504,7 +504,7 @@
             </bpws:extensionActivity>
             <bpws:extensionActivity>
                 <tibex:activityExtension
-                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/activity/sendhttpresponse/xsd/input+ab85dbb9-f667-4094-aedf-3b5412e04be8+ResponseActivityInput&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;SendHTTPResponse-input&quot; match=&quot;/&quot;>&lt;tns:ResponseActivityInput>&lt;asciiContent>&lt;xsl:value-of select=&quot;&amp;quot;Wooho!! Kick off!!&amp;quot;&quot;/>&lt;/asciiContent>&lt;/tns:ResponseActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>"
+                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/activity/sendhttpresponse/xsd/input+ab85dbb9-f667-4094-aedf-3b5412e04be8+ResponseActivityInput&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;SendHTTPResponse-input&quot; match=&quot;/&quot;>&lt;tns:ResponseActivityInput>&lt;asciiContent>&lt;xsl:value-of select=&quot;&amp;quot;Wooho!! I'm kicking off metering&amp;quot;&quot;/>&lt;/asciiContent>&lt;/tns:ResponseActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>"
                     expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
                     inputVariable="SendHTTPResponse-input"
                     name="SendHTTPResponse"
@@ -514,7 +514,7 @@
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/activity/sendhttpresponse/xsd/input+ab85dbb9-f667-4094-aedf-3b5412e04be8+ResponseActivityInput&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;SendHTTPResponse-input&quot; match=&quot;/&quot;>&lt;tns:ResponseActivityInput>&lt;asciiContent>&lt;xsl:value-of select=&quot;&amp;quot;Wooho!! Kick off!!&amp;quot;&quot;/>&lt;/asciiContent>&lt;/tns:ResponseActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/activity/sendhttpresponse/xsd/input+ab85dbb9-f667-4094-aedf-3b5412e04be8+ResponseActivityInput&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;SendHTTPResponse-input&quot; match=&quot;/&quot;>&lt;tns:ResponseActivityInput>&lt;asciiContent>&lt;xsl:value-of select=&quot;&amp;quot;Wooho!! I'm kicking off metering&amp;quot;&quot;/>&lt;/asciiContent>&lt;/tns:ResponseActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
