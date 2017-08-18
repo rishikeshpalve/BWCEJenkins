@@ -49,7 +49,7 @@ pipeline {
           if [ ${DESIRED_COUNT} = "0" ]; then
             DESIRED_COUNT="1"
           fi
-          aws ecs update-service --cluster ${CLUSTER} --region ${REGION} --service ${SERVICE_NAME} --task-definition launch-test-app:${REVISION} --desired-count ${DESIRED_COUNT} --load-balancers targetGroupArn=${TARGET_GROUP_ARN},containerName=bwce-test-app,containerPort=8080
+          aws ecs update-service --cluster ${CLUSTER} --region ${REGION} --service ${SERVICE_NAME} --task-definition launch-test-app:${REVISION} --desired-count ${DESIRED_COUNT}
         else
           echo "entered new service"
           aws ecs create-service --service-name ${SERVICE_NAME} --desired-count 1 --task-definition launch-test-app --load-balancers targetGroupArn=${TARGET_GROUP_ARN},containerName=bwce-test-app,containerPort=8080 --role ${IAM_ROLE} --cluster ${CLUSTER} --region ${REGION}
