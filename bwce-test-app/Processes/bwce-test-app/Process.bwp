@@ -116,42 +116,6 @@
             <element name="ActivityTimedOutException" type="tns:ActivityTimedOutExceptionType"/>
         </schema>
         <schema elementFormDefault="unqualified"
-            targetNamespace="http://xmlns.tibco.com/encodings/mime"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://xmlns.tibco.com/encodings/mime">
-            <complexType name="mimePartType">
-                <sequence>
-                    <element maxOccurs="1" minOccurs="1"
-                        name="mimeHeaders" type="tns:mimeHeadersType"/>
-                    <choice>
-                        <element name="binaryContent" type="base64Binary"/>
-                        <element name="textContent" type="string"/>
-                        <element name="fileName" type="string"/>
-                    </choice>
-                </sequence>
-            </complexType>
-            <complexType name="mimeHeadersType">
-                <sequence>
-                    <element maxOccurs="1" minOccurs="0"
-                        name="content-disposition" type="string"/>
-                    <element maxOccurs="1" minOccurs="1"
-                        name="content-type" type="string"/>
-                    <element maxOccurs="1" minOccurs="0"
-                        name="content-transfer-encoding" type="string"/>
-                    <element maxOccurs="1" minOccurs="0"
-                        name="content-id" type="string"/>
-                    <any maxOccurs="unbounded" minOccurs="0"
-                        namespace="##any" processContents="lax"/>
-                </sequence>
-            </complexType>
-            <complexType name="mimeEnvelopeElementType">
-                <sequence>
-                    <element maxOccurs="unbounded" minOccurs="0"
-                        name="mimePart" type="tns:mimePartType"/>
-                </sequence>
-            </complexType>
-            <element name="mimeEnvelopeElement" type="tns:mimeEnvelopeElementType"/>
-        </schema>
-        <schema elementFormDefault="unqualified"
             targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/httpreceiver+baef3150-009a-4438-9b33-be13c7c168ad+ActivityOutputType"
             xmlns="http://www.w3.org/2001/XMLSchema"
             xmlns:ns0="http://xmlns.tibco.com/encodings/mime" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/httpreceiver+baef3150-009a-4438-9b33-be13c7c168ad+ActivityOutputType">
@@ -280,11 +244,48 @@
             </complexType>
             <element name="ResponseActivityInput" type="tns:ActivityInputType"/>
         </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://xmlns.tibco.com/encodings/mime"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://xmlns.tibco.com/encodings/mime">
+            <complexType name="mimePartType">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1"
+                        name="mimeHeaders" type="tns:mimeHeadersType"/>
+                    <choice>
+                        <element name="binaryContent" type="base64Binary"/>
+                        <element name="textContent" type="string"/>
+                        <element name="fileName" type="string"/>
+                    </choice>
+                </sequence>
+            </complexType>
+            <complexType name="mimeHeadersType">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="content-disposition" type="string"/>
+                    <element maxOccurs="1" minOccurs="1"
+                        name="content-type" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="content-transfer-encoding" type="string"/>
+                    <element maxOccurs="1" minOccurs="0"
+                        name="content-id" type="string"/>
+                    <any maxOccurs="unbounded" minOccurs="0"
+                        namespace="##any" processContents="lax"/>
+                </sequence>
+            </complexType>
+            <complexType name="mimeEnvelopeElementType">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0"
+                        name="mimePart" type="tns:mimePartType"/>
+                </sequence>
+            </complexType>
+            <element name="mimeEnvelopeElement" type="tns:mimeEnvelopeElementType"/>
+        </schema>
     </tibex:Types>
     <tibex:ProcessInfo callable="false" createdBy="rbiswas"
         createdOn="Fri Dec 02 09:03:44 IST 2016" description=""
-        modifiers="public" productVersion="2.1.0 v26 2016-08-16"
-        scalable="true" singleton="true" stateless="true" type="IT"/>
+        extraErrorVars="false" modifiers="public"
+        productVersion="2.1.0 v26 2016-08-16" scalable="true"
+        singleton="true" stateless="true" type="IT"/>
     <tibex:ProcessInterface context="" input="" output=""/>
     <tibex:ProcessTemplateConfigurations/>
     <notation:Diagram measurementUnit="Pixel" type="BWProcess"
@@ -503,7 +504,7 @@
             </bpws:extensionActivity>
             <bpws:extensionActivity>
                 <tibex:activityExtension
-                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/activity/sendhttpresponse/xsd/input+ab85dbb9-f667-4094-aedf-3b5412e04be8+ResponseActivityInput&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;SendHTTPResponse-input&quot; match=&quot;/&quot;>&lt;tns:ResponseActivityInput>&lt;asciiContent>&lt;xsl:value-of select=&quot;&amp;quot;RAJIB - Hello from BWCE CICD test app&amp;quot;&quot;/>&lt;/asciiContent>&lt;/tns:ResponseActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>"
+                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/activity/sendhttpresponse/xsd/input+ab85dbb9-f667-4094-aedf-3b5412e04be8+ResponseActivityInput&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;SendHTTPResponse-input&quot; match=&quot;/&quot;>&lt;tns:ResponseActivityInput>&lt;asciiContent>&lt;xsl:value-of select=&quot;&amp;quot;Wooho!! Kicked the metering off!!&amp;quot;&quot;/>&lt;/asciiContent>&lt;/tns:ResponseActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>"
                     expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
                     inputVariable="SendHTTPResponse-input"
                     name="SendHTTPResponse"
@@ -513,7 +514,7 @@
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/activity/sendhttpresponse/xsd/input+ab85dbb9-f667-4094-aedf-3b5412e04be8+ResponseActivityInput&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;SendHTTPResponse-input&quot; match=&quot;/&quot;>&lt;tns:ResponseActivityInput>&lt;asciiContent>&lt;xsl:value-of select=&quot;&amp;quot;RAJIB - Hello from BWCE CICD test app&amp;quot;&quot;/>&lt;/asciiContent>&lt;/tns:ResponseActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/activity/sendhttpresponse/xsd/input+ab85dbb9-f667-4094-aedf-3b5412e04be8+ResponseActivityInput&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;SendHTTPResponse-input&quot; match=&quot;/&quot;>&lt;tns:ResponseActivityInput>&lt;asciiContent>&lt;xsl:value-of select=&quot;&amp;quot;Wooho!! Kicked the metering off!!&amp;quot;&quot;/>&lt;/asciiContent>&lt;/tns:ResponseActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
